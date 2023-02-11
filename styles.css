@@ -1,22 +1,146 @@
-html {
+:root {
+    --text-color: #FFFFFF;
+}
+
+* {
+    margin: 0;
+    padding: 0;
     box-sizing: border-box;
 }
 
-*,
-*::before,
-*::after {
-    box-sizing: inherit;
-    margin: 0;
-    padding: 0;
-}
-
 body {
-    align-items: stretch;
-    display: flex;
-    font-size: 12pt;
-    justify-content: flex-start;
-    margin: 0;
     min-height: 100vh;
-    padding: 0;
 }
 
+/* Sidebar Section */
+a {
+    text-decoration: none;
+    color: var(--text-color);
+}
+
+li {
+    list-style: none;
+}
+
+h1 {
+    color: #eab308;
+    text-shadow: 0.05em 0.05em 0.2em darkred;
+}
+
+svg {
+    width: 3vw;
+    height: 3vh;
+    color: var(--text-color);
+}
+
+.sidebar {
+    position: absolute;
+    background: #713f12;
+    width: 20vw;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.sidebar .brand-name {
+    height: 10vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.navlist li {
+    font-size: 24px;
+    padding: 10px 40px;
+    display: flex;
+    align-items: center;
+    text-shadow: 0.05em 0.05em 0.2em darkred;
+}
+
+.navlist li:hover {
+    background-color: var(--text-color);
+}
+
+a:hover {
+    color: darkred;
+    text-shadow: 0.05em 0.05em 0.2em darkred;
+}
+
+.sidebar nav .settings {
+    padding-top: 1rem;
+}
+
+
+/* Heade Section */
+.container {
+    position: absolute;
+    right: 0;
+    width: 80vw;
+    height: 100vh;
+    background: #18181b;
+}
+
+.container .header {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 80vw;
+    height: 10vh;
+    background: var(--text-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 8px #18181b;
+}
+
+.container .header .nav {
+    width: 90%;
+    display: flex;
+    align-items: center;
+}
+
+.container .header .nav .search {
+    flex: 3;
+    display: flex;
+    justify-content: center;
+}
+
+.container .header .nav .search input[type=text] {
+    border: none;
+    background: #e7e5e4;
+    padding: 10px;
+    width: 50%;
+}
+
+.container .header .nav .search button {
+    width: 40px;
+    height: 40px;
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container .header .nav .search button svg {
+    height: 30px;
+    width: 30px;
+}
+
+.container .header .nav .user {
+    flex: 1;
+}
+
+.btn {
+    background: #713f12;
+    color: var(--text-color);
+    padding: 5px 10px;
+    text-align: center;
+}
+
+.btn:hover {
+    color: darkred;
+    text-shadow: 0.05em 0.05em 0.2em darkred;
+    background-color: var(--text-color);
+    padding: 3px 8px;
+    border: 2px solid darkred;
+}
